@@ -33,6 +33,17 @@ menuButton.addEventListener("click", () => {
 
 navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && mainNav.classList.contains("is-open")) {
+    closeMenu();
+    menuButton.focus();
+  }
+});
+
+window.matchMedia("(min-width: 821px)").addEventListener("change", (event) => {
+  if (event.matches) closeMenu();
+});
+
 window.addEventListener(
   "scroll",
   () => header.classList.toggle("is-scrolled", window.scrollY > 40),

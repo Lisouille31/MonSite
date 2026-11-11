@@ -1,4 +1,4 @@
-# Studio Web
+# La toile de Lisa
 
 Site vitrine responsive présentant des services et tarifs de création de sites web.
 
@@ -23,7 +23,6 @@ Puis ouvrez `http://localhost:8080/apercu.html`.
 
 ## À personnaliser avant la mise en ligne
 
-- Remplacer « Studio Web » par votre nom ou votre marque.
 - Adresse de contact configurée : `latoiledelisa@gmail.com`.
 - Ajuster les technologies et prestations selon vos compétences réelles.
 - Ajouter vos projets dès que votre portfolio est prêt.
