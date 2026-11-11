@@ -1,0 +1,5 @@
+/favicon.ico
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/favicon-logo-final-v8.png
+  Cache-Control: public, max-age=0, must-revalidate

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111820" />
+    <title>Atelier responsive — La toile de Lisa</title>
+    <link rel="stylesheet" href="apercu.css" />
+    <script src="apercu.js" defer></script>
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="title">
+        <span class="logo">S</span>
+        <div>
+          <strong>Atelier responsive</strong>
+          <small>Prévisualisation de index.html</small>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label>
+          Page
+          <select id="page-select">
+            <option value="index.html">Page d'accueil</option>
+            <option value="logos.html">Logo final</option>
+          </select>
+        </label>
+
+        <label>
+          Zoom ordinateur
+          <select id="desktop-zoom">
+            <option value="0.5">50 %</option>
+            <option value="0.6" selected>60 %</option>
+            <option value="0.7">70 %</option>
+            <option value="0.8">80 %</option>
+          </select>
+        </label>
+
+        <button id="reload-button" type="button">
+          <span aria-hidden="true">↻</span>
+          Actualiser
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="preview-panel desktop-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="device-icon">▰</span>
+            <div><strong>Ordinateur</strong><small id="desktop-size">1440 × 900 px</small></div>
+          </div>
+          <label>
+            Taille
+            <select id="desktop-preset">
+              <option value="1440x900">Portable 14″ — 1440 × 900</option>
+              <option value="1366x768">Portable — 1366 × 768</option>
+              <option value="1920x1080">Grand écran — 1920 × 1080</option>
+              <option value="1280x800">Petit écran — 1280 × 800</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="desktop-stage">
+          <div class="desktop-device" id="desktop-device">
+            <div class="desktop-camera"></div>
+            <div class="desktop-screen">
+              <iframe
+                id="desktop-frame"
+                src="index.html"
+                title="Aperçu de la page sur ordinateur"
+              ></iframe>
+            </div>
+            <div class="desktop-base"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="preview-panel mobile-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="device-icon">▯</span>
+            <div><strong>Portable</strong><small id="mobile-size">390 × 844 px</small></div>
+          </div>
+          <div class="mobile-controls">
+            <label>
+              Modèle
+              <select id="mobile-preset">
+                <option value="390x844">iPhone 14 — 390 × 844</option>
+                <option value="375x667">iPhone SE — 375 × 667</option>
+                <option value="412x915">Android — 412 × 915</option>
+                <option value="768x1024">Tablette — 768 × 1024</option>
+              </select>
+            </label>
+            <button
+              class="icon-button"
+              id="rotate-button"
+              type="button"
+              title="Tourner l'appareil"
+              aria-label="Tourner l'appareil"
+            >
+              ↻
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-stage">
+          <div class="phone-device" id="phone-device">
+            <div class="phone-speaker"></div>
+            <div class="phone-screen">
+              <iframe
+                id="mobile-frame"
+                src="index.html"
+                title="Aperçu de la page sur téléphone portable"
+              ></iframe>
+            </div>
+            <div class="phone-home"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="help-bar">
+      <span><i></i> Les deux aperçus utilisent votre fichier <strong>index.html</strong></span>
+      <span>Après une modification dans VS Code, cliquez sur <strong>Actualiser</strong>.</span>
+    </footer>
+  </body>
+</html>
